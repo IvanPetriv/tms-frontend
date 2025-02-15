@@ -1,4 +1,7 @@
-export const jwtTokenObject = {
+/*
+    JWT object which is stored in local storage
+*/
+export const JWT_TOKEN_OBJECT = {
     get jwtToken(): string | null {
         return localStorage.getItem('jwtToken');
     },
@@ -11,7 +14,7 @@ export const jwtTokenObject = {
         if (!token) return null;
 
         try {
-            const [header, payload, signature] = token.split('.');
+            const payload = token.split('.')[1];
             const payloadJson = atob(payload);
             return JSON.parse(payloadJson);
         } catch (error) {

@@ -1,23 +1,19 @@
-import { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 
-import { jwtTokenObject } from "../../shared/constants/global_variables.ts";
-import * as projectsFetch from "../services/fetchers/project_list_fetch.ts";
+import * as projectsFetch from "../../api/project_list_fetch.ts";
 
-import Project from "../../shared/interfaces/DB/project.js";
-
+import Project from "../../interfaces/DB/project.ts";
 
 /*
 	The main page where a logged in user lands
 */
 function Home() {
-	const decodedJwtToken = useMemo(() => jwtTokenObject.decodeToken(), []);
-
-	const [projectList, setProjectList]: useState<Project[] | null> = useState(null);
+	const [projectList, setProjectList] = useState<Project[] | null>(null);
 
 	useEffect(() => {
 		// Gets all projects that the user is in
-		projectsFetch.getAllForUser(5)
+		projectsFetch.getAllForUser(1)
 			.then(data => {
 				setProjectList(data);
 				console.log(data);
@@ -26,18 +22,18 @@ function Home() {
 				setProjectList(null);
 			});
 	}, []);
-	
+
 	return (
 		<div>
 			<div className="project-list">
 				<Table bordered striped hover>
 					<thead>
 						<tr>
-							<td>ID</td>
-							<td>Name</td>
-							<td>Description</td>
-							<td>Source language</td>
-							<td>Created by</td>
+							<th>ID</th>
+							<th>Name</th>
+							<th>Description</th>
+							<th>Source language</th>
+							<th>Created by</th>
 						</tr>
 					</thead>
 					<tbody>

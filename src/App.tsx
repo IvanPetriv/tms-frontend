@@ -1,11 +1,14 @@
 import React, { Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import './App.css';
-import Login from './app/features/login/login.tsx';
-import Signup from "./app/features/login/signup.tsx";
-import NoPage from "./app/core/nopage/nopage.tsx";
-import PasswordReset from "./app/features/login/password_reset.tsx";
-import Home from "./app/features/mainpage/home.tsx";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './assets/styles/App.css';
+
+import Login from './app/pages/login/login.tsx';
+import Signup from "./app/pages/login/signup.tsx";
+import NoPage from "./app/pages/nopage/nopage.tsx";
+import PasswordReset from "./app/pages/login/password_reset.tsx";
+import Home from "./app/pages/home/home.tsx";
 
 const App: React.FC = () => {
   return (

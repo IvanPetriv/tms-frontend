@@ -1,6 +1,6 @@
-import * as connectionAddress from "../../../shared/constants/connection_strings.ts";
-import { delete_api_request as deleteApiRequest, get_api_request as getApiRequest, post_api_request as postApiRequest, put_api_request as putApiRequest } from "./base_fetch.ts";
-import Project from "../../../shared/interfaces/DB/project.js";
+import * as connectionAddress from "../constants/connection_strings.ts";
+import { deleteApiRequest, getApiRequest, postApiRequest, putApiRequest } from "./base_fetch.ts";
+import Project from "../interfaces/DB/project.ts";
 
 
 let tableName: string = "project";
