@@ -1,6 +1,7 @@
-import "./nopage.scss";
+import React from "react";
+import "./not-found.scss";
 
-function NoPage() {
+function NotFound() {
 	return (
 		<div className="container">
 			<p>404</p>
@@ -10,4 +11,4 @@ function NoPage() {
 	)
 }
 
-export default NoPage;
+export default NotFound;

@@ -1,0 +1,18 @@
+.page-container {
+	display: flex;
+}
+
+.page-header {
+	height: 5%;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 2px solid black;
+
+	.page-header-left-align {
+		display: flex;
+	}
+
+	.page-header-right-align {
+		display: flex;
+	}
+}
