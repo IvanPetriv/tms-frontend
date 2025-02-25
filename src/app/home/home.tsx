@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 import ProjectList from "../../components/project_list.tsx";
 
@@ -19,7 +20,7 @@ export default function Home() {
 		<div>
 			<div className="page-header">
 				<div className="page-header-left-align">
-					<Button>Create a project</Button>
+					<Link to="/createproject"><Button>Create a project</Button></Link>
 				</div>
 				<div className="page-header-right-align">
 					<Button>Notifications</Button>

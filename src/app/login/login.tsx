@@ -1,6 +1,6 @@
 import React from "react";
 import "./login.module.scss";
-import * as authFetch from "../../api/auth_fetch.ts";
+import * as authFetch from "../../api/auth_api.ts";
 import { JWT_TOKEN_OBJECT } from "../../constants/global_variables.ts";
 
 

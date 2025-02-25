@@ -1,9 +1,9 @@
 import * as connectionAddress from "../constants/connection_strings.ts";
-import { deleteApiRequest, getApiRequest, postApiRequest, putApiRequest } from "./base_fetch.ts";
+import { deleteApiRequest, getApiRequest, postApiRequest, putApiRequest } from "./base_api.ts";
 import Project from "../interfaces/DB/project.ts";
 
 
-let tableName: string = "project";
+let tableName: string = "Projects";
 
 /*
 	Fetches all projects that the user is a part of.

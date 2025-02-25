@@ -1,5 +1,5 @@
 import * as connection from "../constants/connection_strings.ts";
-import { postApiRequest } from "./base_fetch.ts";
+import { postApiRequest } from "./base_api.ts";
 import UserLogin from "../interfaces/user_login.ts";
 import UserRegister from "../interfaces/user_register.ts";
 

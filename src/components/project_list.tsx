@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 
-import * as projectsFetch from "../api/project_list_fetch.ts";
+import * as projectsFetch from "../api/projects_api.ts";
 
 import Project from "../interfaces/DB/project.ts";
 
@@ -14,7 +14,6 @@ function ProjectList() {
 		projectsFetch.getAllForUser(1)
 			.then(data => {
 				setProjectList(data);
-				console.log(data);
 			}).catch(error => {
 				console.error("Failed to fetch projects:", error);
 				setProjectList(null);
@@ -26,7 +25,7 @@ function ProjectList() {
 			{projectList === null ? (
 				<p>Error loading projects.</p>
 			) : (
-				<Table bordered striped hover>
+				<Table striped hover>
 					<thead>
 
 					</thead>
